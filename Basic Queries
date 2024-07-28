@@ -1,0 +1,43 @@
+--To create a Database
+  CREATE DATABASE Student_details
+
+--To use the Database
+  USE Student_details
+
+--To create a table
+  CREATE TABLE Student(
+  Sno INT,
+  Name varchar(150),
+  Dept varchar(60)'
+  City varchar(60));
+
+--To view the table
+  SELECT * FGROM Students
+
+--To insert value into the table
+  INSERT INTO Students VALUES(51,'Ajay','IT','CBE');
+  INSERT INTO Students VALUES(52,'Bob','CSE','CHN');
+  INSERT INTO Students VALUES(53,'Charlie','IT','TRY');
+  INSERT INTO Students VALUES(54,'David','ECE','CBE');
+  INSERT INTO Students VALUES(55,'Eren','AIML','CHN');
+
+--To view a particular detail
+  SELECT Name,City FROM Students WHERE Sno=52;
+
+--To Update a detail
+  UPDATE Students SET City='TRY' WHERE Sno=53;
+
+--AND Operator
+  SELECT * FROM Student WHERE City='CHN' AND Dept='CSE';
+
+--OR Operator
+    SELECT * FROM Student WHERE City='CHN' OR Dept='IT';
+
+--NOT Operator
+    SELECT * FROM Student WHERE NOT City='CHN;
+
+--Order By
+  SELECT * FROM Student WHERE ORDER BY City ASC;
+
+--To add a column to an existing table
+  ALTER TABLE Student ADD Marks INT;
